@@ -39,8 +39,8 @@ exports.login = async (req, res) => {
     if (result != null) {
       if (bcrypt.compareSync(password, result.password)) {
         res.json({
-          message: 'login!',
-          // data: result,
+          message: 'ok',
+          data: result,
         });
       } else {
         res.json({
