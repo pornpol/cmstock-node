@@ -30,12 +30,12 @@ exports.getProductById = async (req, res) => {
     let result = await product.findOne({ where: { id: id } });
     res.json({
       message: 'ok',
-      data: result,
+      products: result,
     });
   } catch (err) {
     res.json({
       message: 'error',
-      data: err,
+      products: err,
     });
   }
 };
@@ -48,12 +48,12 @@ exports.getProductByKeyword = async (req, res) => {
     });
     res.json({
       message: 'ok',
-      data: result,
+      products: result,
     });
   } catch (err) {
     res.json({
       message: 'error',
-      data: err,
+      products: err,
     });
   }
 };
